@@ -1,0 +1,25 @@
+# ---------- 构建产物与二进制库 ----------
+# 体积过大（libavcodec.lib 单个 127MB，超过 GitHub 100MB 限制），不入库
+*.exe
+*.dll
+*.lib
+*.a
+*.obj
+*.pdb
+*.ilk
+*.exp
+ffmpeg-video-play-master/lib/
+ffmpeg-video-play-master/dll/
+# 单文件 284MB 的电子书，超过 GitHub 100MB 上限
+ffmpeg-video-play-master/学习OpenCV 3 中文版.pdf
+*.log
+
+# ---------- Python ----------
+__pycache__/
+*.pyc
+
+# ---------- 本地配置与运行状态（含密钥/token，禁止提交） ----------
+watch_cloud/backend/config.ini
+watch_cloud/backend/state/
+*.bind_state
+*.sync_state

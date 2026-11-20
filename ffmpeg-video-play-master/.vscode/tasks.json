@@ -1,0 +1,86 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: 构建 1main.cpp 单文件版 (x64)",
+            "command": "C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++11",
+                "-m64",
+                "-I${workspaceFolder}/lib/SDL2/include",
+                "-I${workspaceFolder}/lib/ffmpeg-4.2.1/include",
+                "${workspaceFolder}/1main.cpp",
+                "-o",
+                "${workspaceFolder}/build/player.exe",
+                "-L${workspaceFolder}/lib/SDL2/lib/x64",
+                "-L${workspaceFolder}/lib/ffmpeg-4.2.1/lib/x64",
+                "-L${workspaceFolder}/lib/windows-kits/lib/x64",
+                "-lSDL2",
+                "-lavcodec",
+                "-lavdevice",
+                "-lavfilter",
+                "-lavformat",
+                "-lavutil",
+                "-lswresample",
+                "-lswscale",
+                "-lOle32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "编译 1main.cpp 单文件版 (带音频同步+进度条UI)"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: 构建 FFmpeg 视频播放器 (多文件 x64)",
+            "command": "C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++11",
+                "-m64",
+                "-I${workspaceFolder}/lib/SDL2/include",
+                "-I${workspaceFolder}/lib/ffmpeg-4.2.1/include",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/VideoPlayer.cpp",
+                "${workspaceFolder}/VideoRenderer.cpp",
+                "${workspaceFolder}/VideoClock.cpp",
+                "-o",
+                "${workspaceFolder}/build/ffmpeg-video-play.exe",
+                "-L${workspaceFolder}/lib/SDL2/lib/x64",
+                "-L${workspaceFolder}/lib/ffmpeg-4.2.1/lib/x64",
+                "-L${workspaceFolder}/lib/windows-kits/lib/x64",
+                "-lSDL2",
+                "-lavcodec",
+                "-lavdevice",
+                "-lavfilter",
+                "-lavformat",
+                "-lavutil",
+                "-lswresample",
+                "-lswscale",
+                "-lOle32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "使用 MinGW g++ 构建完整项目 (x64)"
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,33 @@
+# 相册同步后端配置模板：复制为 config.ini 后填写。
+# 华为云 AK/SK 只保存在后端，手表端只保存后端下发的访问令牌。
+
+[backend]
+host = 127.0.0.1
+port = 8080
+# huawei = 走真实华为云；local = 本地目录（无凭据时联调用）；auto = 凭据齐全走 huawei，否则 local
+mode = auto
+# 绑定信息与访问令牌的落盘目录（相对本文件所在目录）
+state_dir = state
+
+[huawei]
+# 华为云「我的凭证 - 访问密钥」中的 AK/SK
+ak =
+sk =
+region = cn-north-4
+# OBS 终端节点，必须与桶所在区域一致
+obs_endpoint = obs.cn-north-4.myhuaweicloud.com
+# 已在 OBS 控制台创建好的桶名
+obs_bucket =
+# 消息&短信（MSGSMS）控制台参数
+sms_endpoint = smsapi.cn-north-4.myhuaweicloud.com
+sms_app_key =
+sms_app_secret =
+# 国内短信通道号
+sms_sender =
+sms_template_id =
+sms_signature =
+# 验证码模板参数：{code} 会被替换成真实验证码，多参数按模板顺序写
+sms_template_paras = ["{code}"]
+
+[local]
+storage_dir = storage

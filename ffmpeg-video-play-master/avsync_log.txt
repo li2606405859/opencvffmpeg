@@ -1,0 +1,38 @@
+﻿.\avsync_player.exe : [DEMUX] 线程启动
+At line:19 char:1
++ .\avsync_player.exe res\test.mp4 2>avsync_log.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([DEMUX] 线程启动:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[DEMUX] 视频包 #1
+[DEMUX] 视频包 #2
+[DEMUX] 音频包 #1
+[DEMUX] 视频包 #3
+[DEMUX] 音频包 #2
+[DEMUX] 音频包 #3
+[VDEC] 解码帧 #1 pts=0.000
+[VF-Q] push 后 size=1
+[VDEC] 解码帧 #2 pts=0.033
+[VF-Q] push 后 size=2
+[VDEC] 解码帧 #3 pts=0.067
+[VF-Q] push 后 size=3
+[VF-Q] push 后 size=4
+[VF-Q] push 后 size=5
+[VF-Q] push 后 size=6
+[VF-Q] push 后 size=7
+[VF-Q] push 后 size=8
+[DEMUX] av_read_frame=-541478725 EOF
+[DEMUX] 线程退出 v=7552 a=10845
+[VF-Q] pop 后 size=7
+[VF-Q] pop 后 size=6
+[VF-Q] pop 后 size=5
+[VF-Q] pop 后 size=4
+[VF-Q] pop 后 size=3
+[VF-Q] pop 后 size=2
+[VF-Q] pop 后 size=1
+[VF-Q] pop 后 size=0
+[WAIT] 视频队列空, 已空转 200 轮
+[WAIT] 视频队列空, 已空转 400 轮
+[WAIT] 视频队列空, 已空转 600 轮
+[EVENT] SDL_QUIT 收到
